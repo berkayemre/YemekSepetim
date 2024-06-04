@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Scf-C3-Gsj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sepet Sayfa-->
+        <scene sceneID="lrM-Ta-g0H">
+            <objects>
+                <viewController id="klJ-Yb-V3G" customClass="SepetSayfa" customModule="YemekSepetimApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Lm-le-omC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpg-tO-ayU">
+                                <rect key="frame" x="131.5" y="748.5" width="151.5" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Siparişi Tamamla">
+                                    <color key="baseBackgroundColor" name="renk1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnSiparisiTamamla:" destination="klJ-Yb-V3G" eventType="touchUpInside" id="ysW-6j-lgM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toplam Fiyat : ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHD-7E-yn0">
+                                <rect key="frame" x="20" y="688.5" width="180.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" name="renk1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KKH-jI-hQq">
+                                <rect key="frame" x="0.0" y="92" width="414" height="581.5"/>
+                                <color key="backgroundColor" name="renk2"/>
+                                <color key="separatorColor" name="renk2"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sepetHucre" rowHeight="99" id="9Q5-6w-ukT" customClass="SepetHucre" customModule="YemekSepetimApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="99"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Q5-6w-ukT" id="le1-7A-Qi9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-4a-3Lj" userLabel="arkaplan">
+                                                    <rect key="frame" x="5" y="5" width="404" height="89"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdh-AC-19P">
+                                                            <rect key="frame" x="252" y="10" width="111" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="T4M-qt-z9H"/>
+                                                                <constraint firstAttribute="width" constant="111" id="xJ8-Sa-erm"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="69V-zW-mje">
+                                                            <rect key="frame" x="8" y="10" width="60" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="K6S-Ze-jCi"/>
+                                                                <constraint firstAttribute="height" constant="51" id="sbE-3r-rHM"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrZ-Pj-CKJ">
+                                                            <rect key="frame" x="87" y="10" width="120" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="120" id="Kth-gg-3xy"/>
+                                                                <constraint firstAttribute="height" constant="20.5" id="US3-NL-4gG"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                            <color key="textColor" name="renk1"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD9-IN-y81">
+                                                            <rect key="frame" x="252" y="40.5" width="111" height="29.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="29.5" id="pBp-Z9-Ng7"/>
+                                                                <constraint firstAttribute="width" constant="111" id="vVp-C7-NfL"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="pdh-AC-19P" firstAttribute="top" secondItem="kiD-4a-3Lj" secondAttribute="top" constant="10" id="2jQ-H1-h6V"/>
+                                                        <constraint firstAttribute="height" constant="89" id="8VB-Cw-fjf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DD9-IN-y81" secondAttribute="trailing" constant="41" id="D6k-hB-L5z"/>
+                                                        <constraint firstAttribute="width" constant="404" id="OaW-iX-e20"/>
+                                                        <constraint firstItem="pdh-AC-19P" firstAttribute="leading" secondItem="qrZ-Pj-CKJ" secondAttribute="trailing" constant="45" id="ZDS-dx-shS"/>
+                                                        <constraint firstItem="69V-zW-mje" firstAttribute="leading" secondItem="kiD-4a-3Lj" secondAttribute="leading" constant="8" id="a2B-Ub-4yI"/>
+                                                        <constraint firstItem="qrZ-Pj-CKJ" firstAttribute="top" secondItem="kiD-4a-3Lj" secondAttribute="top" constant="10" id="pMI-bu-f60"/>
+                                                        <constraint firstItem="69V-zW-mje" firstAttribute="top" secondItem="kiD-4a-3Lj" secondAttribute="top" constant="10" id="pl3-g1-ZXw"/>
+                                                        <constraint firstItem="DD9-IN-y81" firstAttribute="top" secondItem="pdh-AC-19P" secondAttribute="bottom" constant="10" id="rfQ-v0-lKx"/>
+                                                        <constraint firstItem="qrZ-Pj-CKJ" firstAttribute="leading" secondItem="69V-zW-mje" secondAttribute="trailing" constant="19" id="sVz-Tu-B1A"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="kiD-4a-3Lj" secondAttribute="bottom" constant="5" id="FCm-mJ-2JN"/>
+                                                <constraint firstItem="kiD-4a-3Lj" firstAttribute="top" secondItem="le1-7A-Qi9" secondAttribute="top" constant="5" id="PcQ-23-mFt"/>
+                                                <constraint firstAttribute="trailing" secondItem="kiD-4a-3Lj" secondAttribute="trailing" constant="5" id="h70-CO-PaK"/>
+                                                <constraint firstItem="kiD-4a-3Lj" firstAttribute="leading" secondItem="le1-7A-Qi9" secondAttribute="leading" constant="5" id="v0D-lw-3o4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="renk2"/>
+                                        <connections>
+                                            <outlet property="sepetImageView" destination="69V-zW-mje" id="S99-l0-iok"/>
+                                            <outlet property="yemekAdet" destination="DD9-IN-y81" id="OrB-CD-ABm"/>
+                                            <outlet property="yemekAdi" destination="qrZ-Pj-CKJ" id="gJK-yu-w4Q"/>
+                                            <outlet property="yemekFiyat" destination="pdh-AC-19P" id="7q6-Bn-zov"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GYN-UC-SGV"/>
+                        <color key="backgroundColor" name="renk2"/>
+                        <constraints>
+                            <constraint firstItem="vpg-tO-ayU" firstAttribute="top" secondItem="jHD-7E-yn0" secondAttribute="bottom" constant="30" id="0pD-Fe-raI"/>
+                            <constraint firstItem="vpg-tO-ayU" firstAttribute="centerX" secondItem="7Lm-le-omC" secondAttribute="centerX" id="GbZ-um-XlW"/>
+                            <constraint firstItem="KKH-jI-hQq" firstAttribute="top" secondItem="GYN-UC-SGV" secondAttribute="top" id="LQX-nw-JBH"/>
+                            <constraint firstItem="GYN-UC-SGV" firstAttribute="bottom" secondItem="vpg-tO-ayU" secondAttribute="bottom" constant="30" id="d0q-9s-7Wu"/>
+                            <constraint firstItem="jHD-7E-yn0" firstAttribute="top" secondItem="KKH-jI-hQq" secondAttribute="bottom" constant="15" id="fEg-Ew-2sp"/>
+                            <constraint firstItem="jHD-7E-yn0" firstAttribute="leading" secondItem="GYN-UC-SGV" secondAttribute="leading" constant="20" id="t5a-Fr-hS5"/>
+                            <constraint firstItem="KKH-jI-hQq" firstAttribute="trailing" secondItem="GYN-UC-SGV" secondAttribute="trailing" id="vcd-OA-h3C"/>
+                            <constraint firstItem="KKH-jI-hQq" firstAttribute="leading" secondItem="GYN-UC-SGV" secondAttribute="leading" id="yZv-zf-3mW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UJL-pl-0hf">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="xmark" catalog="system" id="FnI-i0-SXg">
+                            <color key="tintColor" name="renk1"/>
+                            <connections>
+                                <action selector="btnKapat:" destination="klJ-Yb-V3G" id="s9d-HB-fKP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sepetTableView" destination="KKH-jI-hQq" id="sa9-AZ-2Od"/>
+                        <outlet property="toplamFiyat" destination="jHD-7E-yn0" id="1eK-dO-zNb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kn1-hd-Lpo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="146.65178571428569"/>
+        </scene>
+        <!--YEMEKLER-->
+        <scene sceneID="Fqx-Gv-qCp">
+            <objects>
+                <viewController id="rck-8f-ByF" customClass="Anasayfa" customModule="YemekSepetimApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ToL-4o-cFM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Ürün ara" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7J-uy-tQm">
+                                <rect key="frame" x="0.0" y="92" width="414" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="renk2"/>
+                                <color key="tintColor" name="renk2"/>
+                                <color key="barTintColor" name="renk2"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="rck-8f-ByF" id="Jct-FP-DGl"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bkF-nJ-IA8">
+                                <rect key="frame" x="0.0" y="148" width="414" height="665"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" name="arkaplan"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="yemeklerHucre" rowHeight="99" id="sy3-qn-dHe" customClass="YemeklerHucre" customModule="YemekSepetimApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="99"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sy3-qn-dHe" id="NvH-Tp-FIH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9C-ci-NPe">
+                                                    <rect key="frame" x="5" y="5" width="404" height="89"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="l2o-5a-cHm">
+                                                            <rect key="frame" x="8" y="14" width="291" height="51"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z8u-jA-ytP">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="51"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="51" id="UJS-xy-ysz"/>
+                                                                        <constraint firstAttribute="width" constant="60" id="qtZ-GG-ZMQ"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IZGARA SOMON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-FI-gik">
+                                                                    <rect key="frame" x="107" y="0.0" width="184" height="51"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="184" id="3fL-3o-7Bs"/>
+                                                                        <constraint firstAttribute="height" constant="51" id="zPg-aO-aiQ"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="textColor" name="renk1"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="z8u-jA-ytP" firstAttribute="leading" secondItem="l2o-5a-cHm" secondAttribute="leading" id="0dB-bg-9dh"/>
+                                                                <constraint firstItem="Yb6-FI-gik" firstAttribute="leading" secondItem="z8u-jA-ytP" secondAttribute="trailing" constant="47" id="2Du-pU-H63"/>
+                                                                <constraint firstItem="Yb6-FI-gik" firstAttribute="top" secondItem="l2o-5a-cHm" secondAttribute="top" id="5FQ-NZ-iaf"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Yb6-FI-gik" secondAttribute="bottom" id="AD9-fi-m9a"/>
+                                                                <constraint firstAttribute="width" constant="291" id="hOK-lK-ceh"/>
+                                                                <constraint firstAttribute="bottom" secondItem="z8u-jA-ytP" secondAttribute="bottom" id="hk0-m8-XpE"/>
+                                                                <constraint firstAttribute="height" constant="51" id="pNB-R6-wNH"/>
+                                                                <constraint firstItem="z8u-jA-ytP" firstAttribute="top" secondItem="l2o-5a-cHm" secondAttribute="top" id="tB7-4K-YXg"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Yb6-FI-gik" secondAttribute="trailing" id="zZw-Vl-s4H"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSP-O5-pEH">
+                                                            <rect key="frame" x="314" y="27" width="48" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="48" id="1Gt-gT-hCM"/>
+                                                                <constraint firstAttribute="height" constant="24" id="Enq-6q-JLF"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="l2o-5a-cHm" secondAttribute="bottom" constant="24" id="J98-LH-nlz"/>
+                                                        <constraint firstItem="l2o-5a-cHm" firstAttribute="top" secondItem="O9C-ci-NPe" secondAttribute="top" constant="14" id="aiH-1A-1Zu"/>
+                                                        <constraint firstItem="ZSP-O5-pEH" firstAttribute="top" secondItem="O9C-ci-NPe" secondAttribute="top" constant="27" id="l1t-E4-gk9"/>
+                                                        <constraint firstItem="l2o-5a-cHm" firstAttribute="leading" secondItem="O9C-ci-NPe" secondAttribute="leading" constant="8" id="wHD-4Y-yX4"/>
+                                                        <constraint firstItem="ZSP-O5-pEH" firstAttribute="leading" secondItem="l2o-5a-cHm" secondAttribute="trailing" constant="15" id="xbr-AC-n2C"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="25"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" name="renk2"/>
+                                            <color key="tintColor" name="renk2"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="O9C-ci-NPe" secondAttribute="bottom" constant="5" id="AlX-To-QHu"/>
+                                                <constraint firstItem="O9C-ci-NPe" firstAttribute="leading" secondItem="NvH-Tp-FIH" secondAttribute="leading" constant="5" id="BAD-4y-nvn"/>
+                                                <constraint firstItem="O9C-ci-NPe" firstAttribute="top" secondItem="NvH-Tp-FIH" secondAttribute="top" constant="5" id="YoF-QX-6nF"/>
+                                                <constraint firstAttribute="trailing" secondItem="O9C-ci-NPe" secondAttribute="trailing" constant="5" id="gjS-Os-Ll4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="yemekAdi" destination="Yb6-FI-gik" id="s40-9F-1s9"/>
+                                            <outlet property="yemekFiyat" destination="ZSP-O5-pEH" id="EhP-LP-9jL"/>
+                                            <outlet property="yemekResim" destination="z8u-jA-ytP" id="zva-yI-LW7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VLM-e3-Rm4"/>
+                        <color key="backgroundColor" name="renk2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="YEMEKLER" largeTitleDisplayMode="always" id="MGc-07-zPG"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Q7J-uy-tQm" id="2tm-CX-Jpn"/>
+                        <outlet property="yemeklerTableView" destination="bkF-nJ-IA8" id="7nY-up-ymp"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toDetay" id="Qz4-hG-loj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8G2-8g-7je" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="-587.27678571428567"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LMi-Hf-Xo7">
+            <objects>
+                <tabBarController id="Scf-C3-Gsj" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="75l-iP-uAm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="renk1"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ynl-Lg-3EI" kind="relationship" relationship="viewControllers" id="SBd-b7-MAa"/>
+                        <segue destination="3ES-fS-dMd" kind="relationship" relationship="viewControllers" id="XT8-ok-sy9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SA5-dz-dB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1800" y="-283"/>
+        </scene>
+        <!--Detay Sayfa-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DetaySayfa" customModule="YemekSepetimApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r8Q-ZQ-UEa">
+                                <rect key="frame" x="81" y="172" width="251" height="251"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IZGARA SOMON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QT-C8-QVD">
+                                <rect key="frame" x="111" y="453" width="192" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" name="renk1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 ₺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sB-SM-k7f">
+                                <rect key="frame" x="184.5" y="513" width="45.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3e-qp-Usk">
+                                <rect key="frame" x="193" y="594" width="28" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-bI-J8W">
+                                <rect key="frame" x="150" y="733" width="114" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sepete Ekle">
+                                    <color key="baseBackgroundColor" name="renk1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnSepeteEkle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFl-5C-Dug"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pi-HP-UOX">
+                                <rect key="frame" x="261" y="593.5" width="34.5" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+">
+                                    <color key="baseBackgroundColor" name="renk1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnArttir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QdP-Rm-1GQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biQ-Pw-M2b">
+                                <rect key="frame" x="121" y="593.5" width="32" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-">
+                                    <color key="baseBackgroundColor" name="renk1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnAzalt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cld-ad-bY2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="renk2"/>
+                        <color key="tintColor" name="renk1"/>
+                        <constraints>
+                            <constraint firstItem="3QT-C8-QVD" firstAttribute="top" secondItem="r8Q-ZQ-UEa" secondAttribute="bottom" constant="30" id="6NZ-7P-ug6"/>
+                            <constraint firstItem="M3e-qp-Usk" firstAttribute="leading" secondItem="biQ-Pw-M2b" secondAttribute="trailing" constant="40" id="CB8-Nk-FmG"/>
+                            <constraint firstItem="qJw-bI-J8W" firstAttribute="top" secondItem="M3e-qp-Usk" secondAttribute="bottom" constant="107" id="Fxf-X9-KAq"/>
+                            <constraint firstItem="M3e-qp-Usk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GqI-Vx-gan"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qJw-bI-J8W" secondAttribute="bottom" constant="45" id="Mdc-O6-rnr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r8Q-ZQ-UEa" secondAttribute="trailing" constant="82" id="SYz-Kg-R6q"/>
+                            <constraint firstItem="3QT-C8-QVD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UHn-JH-QWS"/>
+                            <constraint firstItem="r8Q-ZQ-UEa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="cwR-r7-mBo"/>
+                            <constraint firstItem="0sB-SM-k7f" firstAttribute="top" secondItem="3QT-C8-QVD" secondAttribute="bottom" constant="30" id="fKX-Z5-zNE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="biQ-Pw-M2b" secondAttribute="bottom" constant="185" id="fMw-b1-nPu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Pi-HP-UOX" secondAttribute="bottom" constant="185" id="ioT-Pt-9zv"/>
+                            <constraint firstItem="r8Q-ZQ-UEa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="n55-uY-eLD"/>
+                            <constraint firstItem="0sB-SM-k7f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pvE-bo-05c"/>
+                            <constraint firstItem="1Pi-HP-UOX" firstAttribute="leading" secondItem="M3e-qp-Usk" secondAttribute="trailing" constant="40" id="rC2-i3-4qn"/>
+                            <constraint firstItem="qJw-bI-J8W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s0D-Ws-i3Y"/>
+                            <constraint firstItem="M3e-qp-Usk" firstAttribute="top" secondItem="0sB-SM-k7f" secondAttribute="bottom" constant="60" id="sb2-Wj-SFq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mrf-1D-a9o"/>
+                    <connections>
+                        <outlet property="yemekAdet" destination="M3e-qp-Usk" id="PnA-wP-ScP"/>
+                        <outlet property="yemekAdi" destination="3QT-C8-QVD" id="o7G-E4-T48"/>
+                        <outlet property="yemekFiyat" destination="0sB-SM-k7f" id="Jgg-eI-N8x"/>
+                        <outlet property="yemekImage" destination="r8Q-ZQ-UEa" id="wiD-CQ-xZw"/>
+                        <segue destination="3ES-fS-dMd" kind="show" identifier="toSepet" id="bAo-8c-YmC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="-587.27678571428567"/>
+        </scene>
+        <!--Sepet-->
+        <scene sceneID="TTh-oV-fe7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3ES-fS-dMd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sepet" image="cart.fill" catalog="system" id="KbE-98-pbg">
+                        <color key="badgeColor" name="renk1"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="52l-sN-6T0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NEo-Zj-QVS">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="klJ-Yb-V3G" kind="relationship" relationship="rootViewController" id="e4Q-X3-UHg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReN-ei-ScL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-910" y="147"/>
+        </scene>
+        <!--Yemekler-->
+        <scene sceneID="OOg-9K-ngE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ynl-Lg-3EI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Yemekler" image="fork.knife" catalog="system" id="hAC-Og-7b2">
+                        <color key="badgeColor" name="renk1"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="V5Z-a1-o4y"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bnq-XB-mZX">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rck-8f-ByF" kind="relationship" relationship="rootViewController" id="atR-Ll-Ek7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgG-zc-KUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-910.14492753623199" y="-587.27678571428567"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bAo-8c-YmC"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="fork.knife" catalog="system" width="94" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="arkaplan">
+            <color red="0.79838979244232178" green="0.73069803782629872" blue="0.65391840117146627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="renk1">
+            <color red="0.5490196078431373" green="0.011764705882352941" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="renk2">
+            <color red="0.85098039215686272" green="0.77254901960784317" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
